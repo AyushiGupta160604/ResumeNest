@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeNest</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #333;
+            color: #a97b7b;
+            padding: 1rem 2rem;
+            display: flexbox;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo1{
+            display: flex;
+            align-items: center;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        nav .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links li a:hover {
+            color: #ff6347;
+        }
+
+        .hero {
+            background: url('../images/bg2.png') no-repeat center center/cover;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero-content {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #e5533d;
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .how-it-works{
+            padding: 2rem;
+        }
+
+        .how-it-works h2{
+            text-align: center;
+        }
+
+        .how-it-works ol{
+            margin-left: 35%;
+        }
+
+        .features h2, .how-it-works h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #ac9494;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            width: 25%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .features, .how-it-works{
+            background-color: #e4dcdc;
+        }
+
+        li{
+            list-style-type: none;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-style: italic;
+            color: #b95c34;
+            font-size: larger;
+        }
+
+        .how-it-works li{
+            list-style-type: square;
+        }
+
+        h2{
+            font-style: italic;
+        }
+
+        .tag{
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>ResumeNest</p>
+            </div>
+            <div class="logo1">
+                <img src="../images/logo.jpeg" alt="logo" height="100px" width="100px">
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav>
+            <h1 class="tag" id="tag">Create a Professional Resume in Minutes</h1>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h3>One step closer to success!</h3>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Easy to Use</h3>
+                <p>Simple interface that makes building your resume a breeze.</p>
+            </div>
+            <div class="card">
+                <h3>Customizable Templates</h3>
+                <p>Choose from a variety of templates to fit your style.</p>
+            </div>
+            <div class="card">
+                <h3>Export to PDF</h3>
+                <p>Easily export your resume to PDF format.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Sign up and create an account.</li>
+            <li>Choose a template and fill in your details.</li>
+            <li>Preview and customize your resume.</li>
+            <li>Download your resume as a PDF.</li>
+        </ol>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us: support@resumeNest.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctaButton = document.querySelector('.cta-button');
+            ctaButton.addEventListener('click', () => {
+                window.location.href = "register.html";
+            });
+        });
+    </script>
+</body>
+</html>
